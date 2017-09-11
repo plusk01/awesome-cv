@@ -43,7 +43,7 @@
     {Apr. 2014} % Date(s)
     {
       \begin{cvitems} % Description(s) of project
-      \item {Used C to write a steganography program which hides plain text or files inside PNG images}
+      \item {Used C to write a steganography program which hides plaintext or files inside PNG images}
       \item {Works by storing the encrypted data in the least two significant bits of pixels (looks unchanged to the human eye)}
       \end{cvitems}
     }
