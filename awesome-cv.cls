@@ -163,10 +163,7 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[
-    Path=\@fontdir,
-    Scale=1.5,
-]{FontAwesome}
+\newfontfamily\FA[Path=\@fontdir,Scale=1.5]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
@@ -187,6 +184,7 @@
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
 \newcommand*{\bodyfontlight}{\sourcesansprolight}
+\newcommand{\faVSpace}[1]{\raisebox{-0.4ex}{#1}}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
@@ -444,68 +442,68 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-            \raisebox{-0.4ex}{\faMobile}\acvHeaderIconSep\@mobile%
+            \faVSpace\faMobile\acvHeaderIconSep\@mobile%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{mailto:\@email}{\raisebox{-0.4ex}{\faEnvelope}\acvHeaderIconSep\@email}%
+          \href{mailto:\@email}{\faVSpace\faEnvelope\acvHeaderIconSep\@email}%
         }%
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{http://\@homepage}{\raisebox{-0.4ex}{\faHome}\acvHeaderIconSep\@homepage}%
+          \href{http://\@homepage}{\faVSpace\faHome\acvHeaderIconSep\@homepage}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\raisebox{-0.4ex}{\faGithubAlt}\acvHeaderIconSep\@github}%
+          \href{https://github.com/\@github}{\faVSpace\faGithubSquare\acvHeaderIconSep\@github}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://gitlab.com/\@gitlab}{\raisebox{-0.4ex}{\faGitlab}\acvHeaderIconSep\@gitlab}%
+          \href{https://gitlab.com/\@gitlab}{\faVSpace\faGitlab\acvHeaderIconSep\@gitlab}%
         }%
       \ifthenelse{\isundefined{\@stackoverflowid}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://stackoverflow.com/users/\@stackoverflowid}{\raisebox{-0.4ex}{\faStackOverflow}\acvHeaderIconSep\@stackoverflowname}%
+          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faVSpace\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\raisebox{-0.4ex}{\faLinkedinSquare}\acvHeaderIconSep\@linkedin}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faVSpace\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://twitter.com/\@twitter}{\raisebox{-0.4ex}{\faTwitter}\acvHeaderIconSep\@twitter}%
+          \href{https://twitter.com/\@twitter}{\faVSpace\faTwitter\acvHeaderIconSep\@twitter}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \raisebox{-0.4ex}{\faSkype}\acvHeaderIconSep\@skype%
+          \faVSpace\faSkype\acvHeaderIconSep\@skype%
         }%
       \ifthenelse{\isundefined{\@reddit}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.reddit.com/user/\@reddit}{\raisebox{-0.4ex}{\faReddit}\acvHeaderIconSep\@reddit}%
+          \href{https://www.reddit.com/user/\@reddit}{\faVSpace\faReddit\acvHeaderIconSep\@reddit}%
         }%
       \ifthenelse{\isundefined{\@xing}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.xing.com/profile/\@xing}{\raisebox{-0.4ex}{\faXingSquare}\acvHeaderIconSep\@xing}
+          \href{https://www.xing.com/profile/\@xing}{\faVSpace\faXingSquare\acvHeaderIconSep\@xing}
         }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
