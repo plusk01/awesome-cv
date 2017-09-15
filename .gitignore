@@ -9,6 +9,11 @@
 *.toc
 *.synctex.gz
 
+## BibLaTeX auxillary files:
+*.bbl
+*.bcf
+*.blg
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
