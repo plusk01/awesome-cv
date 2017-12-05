@@ -1,5 +1,6 @@
 ### TeX ###
 ## Core latex/pdflatex auxiliary files:
+*.fdb_latexmk
 *.aux
 *.lof
 *.log
